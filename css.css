@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+body.hot{
+    background: linear-gradient(to bottom , rgba(0,0,0,0.5) , rgba(0,0,0,1)) , url(img/hot.png)  no-repeat center/cover;
+}
+body .main.hot{
+    background: url(img/hot.png) no-repeat center/cover;
+}
+body.cold{
+    background: linear-gradient(to bottom , rgba(0,0,0,0.5) , rgba(0,0,0,1)) , url(img/cold.png)  no-repeat center/cover;
+}
+body .main.cold{
+    animation: move linear 0.3s;
+    background: url(img/cold.png) no-repeat center/cover;
+}
+.main{
+    width: 350px;
+    height: 550px;
+    border-radius: 5px;
+    padding: 20px 15px 10px 15px;
+    animation: move linear 0.3s;    
+
+}
+.inputSearch{
+    width: 100%;
+    font-size: 15px;
+    border:none;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0 10px 0 10px;
+    outline: none;
+    transition: linear 0.3s;
+    padding: 10px 5px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5)
+}
+.inputSearch:focus{
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px 0 10px 0;
+    transition: linear 0.3s;
+}
+.location{
+    margin-top: 35px;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+.dayTime{
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+.boxWeather{
+    width: 200px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxWeather span:last-child{
+    margin: 0  0 4px 4px;
+}
+.weather{
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+    margin-top: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) ;
+}
+.action{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    flex-direction: row;
+}
+.action-weather,
+.action-win,
+.action-cloud{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.action-weather .icon-weather ,
+.action-win  .icon-weather,
+.action-cloud .icon-weather{
+    margin-bottom: 10px;
+}
+
+@keyframes move{
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
